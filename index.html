@@ -39,13 +39,51 @@
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body {
+        html, body {
             font-family: 'Inter', sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #111827, #581c87, #312e81);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        /* Ensure the background covers the entire viewport and beyond */
+        .full-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #111827, #581c87, #312e81);
+            z-index: -1;
+        }
+        
+        /* Make sure content can scroll properly */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile */
+        }
+        
+        /* Fix mobile scrolling issues */
+        @media (max-width: 768px) {
+            html {
+                height: -webkit-fill-available;
+            }
+            body {
+                height: -webkit-fill-available;
+            }
         }
     </style>
 </head>
 <body class="dark">
-    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 relative overflow-hidden">
+    <!-- Fixed background that covers everything -->
+    <div class="full-background"></div>
+    
+    <div class="content-wrapper bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
             <!-- Floating circles with rainbow colors -->
@@ -290,5 +328,6 @@
             });
         });
     </script>
+    </div> <!-- Close content-wrapper -->
 </body>
 </html>
