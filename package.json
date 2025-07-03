@@ -1,0 +1,19 @@
+{
+  "name": "prompt-to-automation-coming-soon",
+  "version": "1.0.0",
+  "description": "Coming Soon page for Prompt to Automation Platform",
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'No build needed for static site'",
+    "start": "serve ."
+  },
+  "keywords": [
+    "ai",
+    "automation",
+    "productivity",
+    "workflows",
+    "coming-soon"
+  ],
+  "author": "Prompt to Automation Team",
+  "license": "MIT"
+}
