@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt98 - Coming Soon</title>
+    <title>prompt98 - Coming Soon</title>
     <meta name="description" content="prompt98 - Transform your ideas into powerful workflows with AI. The future of automation is coming soon.">
     <meta name="keywords" content="AI, automation, workflows, productivity, prompt98, AI assistant">
     
@@ -203,6 +203,7 @@
                             <input
                                 type="email"
                                 id="email-input"
+                                name="email"
                                 placeholder="Enter your email address"
                                 class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                                 required
@@ -334,7 +335,7 @@
             floatingElements.forEach((element, index) => {
                 // Add random floating animation
                 element.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
-              
+
                 // Add hover effect
                 element.addEventListener('mouseenter', function() {
                     this.style.transform += ' scale(1.1)';
