@@ -1,333 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt to Automation - Coming Soon</title>
-    <meta name="description" content="Prompt to Automation - Transform your ideas into powerful workflows with AI. The future of automation is coming soon.">
-    <meta name="keywords" content="AI, automation, workflows, productivity, prompt to automation, AI assistant">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Prompt to Automation - Coming Soon">
-    <meta property="og:description" content="Transform your ideas into powerful workflows with AI. The future of automation is coming soon.">
-    <meta property="og:url" content="https://your-domain.com">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Prompt to Automation - Coming Soon">
-    <meta property="twitter:description" content="Transform your ideas into powerful workflows with AI. The future of automation is coming soon.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJyYWluYm93MSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz48c3RvcCBvZmZzZXQ9IjE2LjY2JSIgc3RvcC1jb2xvcj0iIzNCODJGNiIvPjxzdG9wIG9mZnNldD0iMzMuMzMlIiBzdG9wLWNvbG9yPSIjOEI1Q0Y2Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNFQzQ4OTkiLz48c3RvcCBvZmZzZXQ9IjY2LjY2JSIgc3RvcC1jb2xvcj0iI0Y1OUUwQiIvPjxzdG9wIG9mZnNldD0iODMuMzMlIiBzdG9wLWNvbG9yPSIjRUY0NDQ0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTBCOTgxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iMzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyYWluYm93MSkiIHN0cm9rZS13aWR0aD0iOCIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmFpbmJvdzEpIiBzdHJva2Utd2lkdGg9IjYiLz48Y2lyY2xlIGN4PSI2MCIgY3k9IjE1IiByPSI0IiBmaWxsPSIjRjU5RTBCIi8+PGNpcmNsZSBjeD0iOTUiIGN5PSIzNSIgcj0iNCIgZmlsbD0iI0VGNDQzNCIvPjxjaXJjbGUgY3g9Ijk1IiBjeT0iODUiIHI9IjQiIGZpbGw9IiMxMEI5ODEiLz48Y2lyY2xlIGN4PSI2MCIgY3k9IjEwNSIgcj0iNCIgZmlsbD0iI0VDNDg5OSIvPjxjaXJjbGUgY3g9IjI1IiBjeT0iODUiIHI9IjQiIGZpbGw9IiM4QjVDRjYiLz48Y2lyY2xlIGN4PSIyNSIgY3k9IjM1IiByPSI0IiBmaWxsPSIjM0I4MkY2Ii8+PC9zdmc+">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    animation: {
-                        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'bounce': 'bounce 1s infinite',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        html, body {
-            font-family: 'Inter', sans-serif;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #111827, #581c87, #312e81);
-            background-attachment: fixed;
-            overflow-x: hidden;
-        }
-        
-        /* Ensure the background covers the entire viewport and beyond */
-        .full-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom right, #111827, #581c87, #312e81);
-            z-index: -1;
-        }
-        
-        /* Make sure content can scroll properly */
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
-            min-height: 100dvh; /* Dynamic viewport height for mobile */
-        }
-        
-        /* Fix mobile scrolling issues */
-        @media (max-width: 768px) {
-            html {
-                height: -webkit-fill-available;
-            }
-            body {
-                height: -webkit-fill-available;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prompt98 - Coming Soon</title>
+  <meta name="description" content="Prompt98 - The easiest way to automate your workflows using AI. Coming Soon."/>
+  <meta name="keywords" content="Prompt98, automation, AI, integrations, productivity"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Prompt98 - Coming Soon"/>
+  <meta property="og:description" content="The easiest way to automate your workflows using AI. Coming Soon."/>
+  <meta property="og:url" content="https://prompt98.com"/>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content="Prompt98 - Coming Soon"/>
+  <meta property="twitter:description" content="The easiest way to automate your workflows using AI. Coming Soon."/>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #111827, #581c87, #312e81);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  </style>
 </head>
 <body class="dark">
-    <!-- Fixed background that covers everything -->
-    <div class="full-background"></div>
-    
-    <div class="content-wrapper bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 relative overflow-hidden">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <!-- Floating circles with rainbow colors -->
-            <div class="absolute rounded-full opacity-20 animate-pulse w-16 h-16 bg-green-500" style="left: 10%; top: 20%; animation-delay: 0s; animation-duration: 3s;"></div>
-            <div class="absolute rounded-full opacity-20 animate-pulse w-24 h-24 bg-blue-500" style="left: 80%; top: 10%; animation-delay: 0.5s; animation-duration: 3.5s;"></div>
-            <div class="absolute rounded-full opacity-20 animate-pulse w-20 h-20 bg-purple-500" style="left: 70%; top: 70%; animation-delay: 1s; animation-duration: 4s;"></div>
-            <div class="absolute rounded-full opacity-20 animate-pulse w-32 h-32 bg-pink-500" style="left: 20%; top: 60%; animation-delay: 1.5s; animation-duration: 4.5s;"></div>
-            <div class="absolute rounded-full opacity-20 animate-pulse w-28 h-28 bg-yellow-500" style="left: 50%; top: 30%; animation-delay: 2s; animation-duration: 5s;"></div>
-            <div class="absolute rounded-full opacity-20 animate-pulse w-36 h-36 bg-red-500" style="left: 15%; top: 80%; animation-delay: 2.5s; animation-duration: 3.5s;"></div>
-        </div>
+  <div class="min-h-screen flex flex-col justify-center items-center text-white text-center px-6 py-12">
+    <!-- Logo + Title -->
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4">PROMPT98</h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+      The easiest way to automate your workflows across WhatsApp, Instagram, Salesforce, Gmail, TikTok and more – with just one natural language prompt.
+    </p>
 
-        <!-- Main Content -->
-        <div class="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-12">
-            
-            <!-- Logo and Company Name -->
-            <div class="text-center mb-12">
-                <div class="flex justify-center mb-8">
-                    <svg width="120" height="120" viewBox="0 0 120 120" class="drop-shadow-lg">
-                        <defs>
-                            <linearGradient id="rainbow1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#10B981" />
-                                <stop offset="16.66%" stop-color="#3B82F6" />
-                                <stop offset="33.33%" stop-color="#8B5CF6" />
-                                <stop offset="50%" stop-color="#EC4899" />
-                                <stop offset="66.66%" stop-color="#F59E0B" />
-                                <stop offset="83.33%" stop-color="#EF4444" />
-                                <stop offset="100%" stop-color="#10B981" />
-                            </linearGradient>
-                            <linearGradient id="rainbow2" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#34D399" />
-                                <stop offset="20%" stop-color="#60A5FA" />
-                                <stop offset="40%" stop-color="#A78BFA" />
-                                <stop offset="60%" stop-color="#F472B6" />
-                                <stop offset="80%" stop-color="#FBBF24" />
-                                <stop offset="100%" stop-color="#F87171" />
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Main circular element -->
-                        <circle cx="60" cy="60" r="35" fill="none" stroke="url(#rainbow1)" stroke-width="8" />
-                        <circle cx="60" cy="60" r="25" fill="none" stroke="url(#rainbow2)" stroke-width="6" />
-                        
-                        <!-- Connection points -->
-                        <circle cx="60" cy="15" r="4" fill="#F59E0B" />
-                        <circle cx="95" cy="35" r="4" fill="#EF4444" />
-                        <circle cx="95" cy="85" r="4" fill="#10B981" />
-                        <circle cx="60" cy="105" r="4" fill="#EC4899" />
-                        <circle cx="25" cy="85" r="4" fill="#8B5CF6" />
-                        <circle cx="25" cy="35" r="4" fill="#3B82F6" />
-                        
-                        <!-- Connection lines -->
-                        <line x1="60" y1="15" x2="60" y2="25" stroke="#F59E0B" stroke-width="3" />
-                        <line x1="95" y1="35" x2="85" y2="42" stroke="#EF4444" stroke-width="3" />
-                        <line x1="95" y1="85" x2="85" y2="78" stroke="#10B981" stroke-width="3" />
-                        <line x1="60" y1="105" x2="60" y2="95" stroke="#EC4899" stroke-width="3" />
-                        <line x1="25" y1="85" x2="35" y2="78" stroke="#8B5CF6" stroke-width="3" />
-                        <line x1="25" y1="35" x2="35" y2="42" stroke="#3B82F6" stroke-width="3" />
-                    </svg>
-                </div>
-                <h1 class="text-6xl md:text-8xl font-black text-white mb-4 tracking-tight">
-                    PROMPT98
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
-            </div>
-
-            <!-- Coming Soon Message -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Something Amazing is Coming
-                </h2>
-                <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                    We're building the future of AI-powered automation. 
-                    <br />
-                    <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
-                        Get ready to transform your workflows.
-                    </span>
-                </p>
-            </div>
-
-            <!-- Countdown Timer -->
-            <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 mb-12 border border-white/20">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">Launch Countdown</h3>
-                    <p class="text-gray-300">We're launching soon. Stay tuned!</p>
-                </div>
-                
-                <div class="grid grid-cols-4 gap-4 text-center" id="countdown">
-                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-4">
-                        <div class="text-3xl md:text-4xl font-bold text-white mb-1" id="days">00</div>
-                        <div class="text-sm text-purple-200 font-medium">Days</div>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-4">
-                        <div class="text-3xl md:text-4xl font-bold text-white mb-1" id="hours">00</div>
-                        <div class="text-sm text-purple-200 font-medium">Hours</div>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-4">
-                        <div class="text-3xl md:text-4xl font-bold text-white mb-1" id="minutes">00</div>
-                        <div class="text-sm text-purple-200 font-medium">Minutes</div>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-4">
-                        <div class="text-3xl md:text-4xl font-bold text-white mb-1" id="seconds">00</div>
-                        <div class="text-sm text-purple-200 font-medium">Seconds</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Email Signup -->
-            <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 max-w-md w-full">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">Be the First to Know</h3>
-                    <p class="text-gray-300">Get notified when we launch and receive exclusive early access.</p>
-                </div>
-
-                <div id="email-form">
-                    <form class="space-y-4" onsubmit="handleEmailSubmit(event)">
-                        <div class="relative">
-                            <input
-                                type="email"
-                                id="email-input"
-                                placeholder="Enter your email address"
-                                class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                required
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                        >
-                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            <span>Notify Me</span>
-                        </button>
-                    </form>
-                </div>
-
-                <div id="success-message" class="text-center hidden">
-                    <svg class="h-16 w-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h4 class="text-xl font-bold text-white mb-2">Thank You!</h4>
-                    <p class="text-gray-300">We'll notify you as soon as we launch.</p>
-                </div>
-            </div>
-
-            <!-- Features Preview -->
-            <div class="mt-16 text-center">
-                <h3 class="text-2xl font-bold text-white mb-8">What's Coming</h3>
-                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                        <div class="text-4xl mb-4">🤖</div>
-                        <h4 class="text-xl font-semibold text-white mb-2">AI-Powered Automation</h4>
-                        <p class="text-gray-300">Transform natural language into powerful workflows</p>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                        <div class="text-4xl mb-4">🔗</div>
-                        <h4 class="text-xl font-semibold text-white mb-2">400+ Integrations</h4>
-                        <p class="text-gray-300">Connect with all your favorite tools and platforms</p>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h4 class="text-xl font-semibold text-white mb-2">Lightning Fast</h4>
-                        <p class="text-gray-300">Deploy automation workflows in seconds, not hours</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="mt-20 text-center">
-                <p class="text-gray-400">
-                    © 2025 PROMPT98. All rights reserved.
-                </p>
-                <div class="flex justify-center space-x-6 mt-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
-                </div>
-            </div>
-        </div>
+    <!-- Countdown -->
+    <div class="grid grid-cols-4 gap-4 mb-12" id="countdown">
+      <div class="text-center">
+        <div class="text-4xl font-bold" id="days">00</div>
+        <div class="text-sm text-purple-300">Days</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold" id="hours">00</div>
+        <div class="text-sm text-purple-300">Hours</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold" id="minutes">00</div>
+        <div class="text-sm text-purple-300">Minutes</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold" id="seconds">00</div>
+        <div class="text-sm text-purple-300">Seconds</div>
+      </div>
     </div>
 
-    <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const launchDate = new Date('2025-08-01T00:00:00Z').getTime();
-            const now = new Date().getTime();
-            const distance = launchDate - now;
+    <!-- Email Form -->
+    <form action="https://formspree.io/f/mdkzvgkg" method="POST" class="w-full max-w-md bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-md">
+      <h2 class="text-2xl font-semibold mb-4">Be the First to Know</h2>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-gray-400 mb-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      />
+      <button
+        type="submit"
+        class="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-bold hover:scale-105 transition-transform"
+      >
+        Notify Me
+      </button>
+    </form>
 
-            if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <!-- Features -->
+    <div class="mt-20 max-w-4xl grid md:grid-cols-3 gap-6">
+      <div class="bg-white/10 p-6 rounded-xl">
+        <div class="text-3xl mb-2">🤖</div>
+        <h3 class="text-lg font-bold mb-1">AI-Powered Automation</h3>
+        <p class="text-gray-300 text-sm">Turn simple text prompts into powerful actions.</p>
+      </div>
+      <div class="bg-white/10 p-6 rounded-xl">
+        <div class="text-3xl mb-2">🔗</div>
+        <h3 class="text-lg font-bold mb-1">400+ Integrations</h3>
+        <p class="text-gray-300 text-sm">From WhatsApp to Salesforce, connect it all.</p>
+      </div>
+      <div class="bg-white/10 p-6 rounded-xl">
+        <div class="text-3xl mb-2">⚡</div>
+        <h3 class="text-lg font-bold mb-1">Lightning Fast</h3>
+        <p class="text-gray-300 text-sm">Launch automations in seconds – no coding needed.</p>
+      </div>
+    </div>
 
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            } else {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-            }
-        }
+    <!-- Footer -->
+    <footer class="mt-16 text-gray-400 text-sm">
+      © 2025 Prompt98. All rights reserved.
+    </footer>
+  </div>
 
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
+  <!-- Countdown Script -->
+  <script>
+    function updateCountdown() {
+      const launchDate = new Date('2025-08-01T00:00:00Z').getTime();
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-        // Email form submission
-        function handleEmailSubmit(event) {
-            event.preventDefault();
-            const email = document.getElementById('email-input').value;
-            
-            if (email) {
-                // Here you would typically send the email to your backend
-                console.log('Email submitted:', email);
-                
-                // Show success message
-                document.getElementById('email-form').classList.add('hidden');
-                document.getElementById('success-message').classList.remove('hidden');
-            }
-        }
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Add some interactivity to floating elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const floatingElements = document.querySelectorAll('.animate-pulse');
-            floatingElements.forEach((element, index) => {
-                // Add random floating animation
-                element.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
-                
-                // Add hover effect
-                element.addEventListener('mouseenter', function() {
-                    this.style.transform += ' scale(1.1)';
-                    this.style.transition = 'transform 0.3s ease';
-                });
-                
-                element.addEventListener('mouseleave', function() {
-                    this.style.transform = this.style.transform.replace(' scale(1.1)', '');
-                });
-            });
-        });
-    </script>
-    </div> <!-- Close content-wrapper -->
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
